@@ -1,0 +1,160 @@
+.App-header {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  background: #ffffff;
+}
+.MenuBtn span {
+  display: none;
+  width: 22px;
+  border: 1px solid #3f4252;
+  margin-bottom: 6px;
+}
+.MenuBtn {
+  margin-left: auto;
+  height: 24px;
+}
+.MenuBtn.active {
+  position: relative;
+  top: 4px;
+}
+.MenuBtn.active span:nth-child(1) {
+  position: relative;
+  top:4px;
+  transform: rotate(45deg);
+}
+.MenuBtn.active span:nth-child(2) {
+  display: none;
+}
+.MenuBtn.active span:nth-child(3) {
+  position: relative;
+  bottom:4px;
+  transform: rotate(-45deg);
+}
+@media screen and (min-width: 1440px) {
+  .App-header {
+    padding: 16px 138px;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  .MenuItems {
+    display: flex;
+  }
+  .MenuItems a {
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 24px;
+    background-image: linear-gradient(#ff5a1f, #ff5a1f);
+  }
+}
+@media screen and (min-width: 1281px) and (max-width: 1440px) {
+  .App-header {
+    padding: 16px 24px;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  .MenuItems {
+    display: flex;
+  }
+  .MenuItems a {
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 24px;
+    background-image: linear-gradient(#ff5a1f, #ff5a1f);
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1280px) {
+  .App-header {
+    padding: 16px 0px;
+    margin: 0 24px 0 24px;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  .MenuItems {
+    display: flex;
+  }
+  .MenuItems a {
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 24px;
+    background-image: linear-gradient(#ff5a1f, #ff5a1f);
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 768px) {
+  .App-header {
+    padding: 15px 16px;
+    //margin: 0 24px 0 24px;
+    gap: 10px;
+    justify-content: space-between;
+  }
+  .MenuBtn span {
+    display: flex;
+  }
+  .MenuItems {
+    //display: none;
+    position: fixed;
+    margin: 48px 0 0 0;
+    padding: 41px 0 19px 0;
+    top: -150%;
+    z-index: -1;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #f6f5f5;
+    transition: all 0.5s ease 0s;
+  }
+  .MenuItems.active {
+    display: block;
+    top: 0;
+  }
+
+
+  .MenuItems a {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 28px;
+    background-image: none;
+  }
+  .MenuItems li {
+    margin-bottom: 19px;
+  }
+}
+
+.MainLogo {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px;
+  gap: 10px;
+}
+
+.MainMenu {
+  display: flex;
+  flex-direction: row;
+  padding: 0px;
+  width: 536px;
+}
+
+.MenuItems {
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 10px;
+  list-style-type: none;
+}
+.MenuItems a {
+  font-family: "Montserrat";
+  padding: 6px 12px 5px;
+  font-style: normal;
+  color: #3f4252;
+  text-decoration: none;
+  background-position: 0% 100%;
+  background-repeat: no-repeat;
+  background-size: 0% 2px;
+  transition: background-size 0.3s;
+}
+.MenuItems a:hover,
+.MenuItems a.active {
+  color: #ff5a1f;
+  background-size: 100% 2px;
+}
