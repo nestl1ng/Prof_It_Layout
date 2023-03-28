@@ -90,7 +90,7 @@ import OrderProjectBtn from '../Buttons/OrderProjectBtn'
           </div>
           <div className='FourthWrapText'>
             <h3 className='FourthMainText'>DevOps</h3>
-            <h4 className='FourthOtherText'>Создаем, поддерживаем и документируем Вашу инфраструктуру с помощью самых современных технологий.</h4>
+            <h4 className='FourthOtherText'>Создаем, поддерживаем и документируем Вашу инфраструктуру с помощью самых современных технологий.:</h4>
           </div>
         </div>
       </div>
