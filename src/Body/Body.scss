@@ -251,6 +251,31 @@ mark {
 .FourthStep {
   display: flex;
   flex-direction: column;
+  margin: 0 138px 0 138px;
+  @include _768 {
+    margin: 0 16px 0 16px;
+  }
+  @include _1280 {
+    margin: 0 24px 0 24px;
+  }
+  @include _1440 {
+    margin: 0 64px 0 150px;
+  }
+}
+.FourthStepPic {
+  width: 384px;
+  height: 384px;
+  @include _1280 {
+    width: 256px;
+    height: 256px;
+  }
+  @include _768 {
+    width: 200px;
+    height: 200px;
+  }
+}
+.FourthStepPic.Browser {
+  transform: matrix(-1, 0, 0, 1, 0, 0);
 }
 .FourthWrapItem {
   display: flex;
@@ -259,7 +284,31 @@ mark {
   align-items: center;
   padding: 0px;
   gap: 130px;
-  margin: 0 138px;
+  margin-bottom: 140px;
+  @include _1440 {
+    gap: 160px;
+  }
+  @include _1280 {
+    gap: 75px;
+    margin-bottom: 63px;
+  }
+  @include _768 {
+    flex-direction: column;
+    gap: 32px;
+    margin-bottom: 66px;
+  }
+}
+.FourthWrapItem.reverse {
+  justify-content: flex-start;
+}
+.FourthPic.reverse {
+  order: 2;
+}
+.FourthPic {
+  order: 0;
+  @include _768 {
+    order: 2;
+  }
 }
 .FourthWrapText {
   display: flex;
@@ -268,6 +317,13 @@ mark {
   padding: 55px 0px 0px;
   gap: 24px;
   width: 438px;
+  @include _1280 {
+    width: 348px;
+  }
+  @include _768 {
+    padding: 0px 16px;
+    width: 100%;
+  }
 }
 .FourthMainText {
   font-weight: 600;
@@ -275,6 +331,14 @@ mark {
   line-height: 48px;
   color: #3f4252;
   margin: 0;
+  @include _1280 {
+    font-size: 24px;
+    line-height: 32px;
+  }
+  @include _768 {
+    font-size: 24px;
+    line-height: 32px;
+  }
 }
 .FourthOtherText {
   font-weight: 300;
@@ -284,5 +348,152 @@ mark {
   align-items: center;
   color: #3f4252;
   margin: 0;
-  padding-right: 60px;
+  @include _1280 {
+    font-size: 16px;
+    line-height: 22px;
+  }
+  @include _768 {
+    font-size: 16px;
+    line-height: 22px;
+  }
+}
+.FifthStep {
+  width: 100%;
+  background-image: url(./FifthStepBack.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 1207.44px;
+  @include _max {
+    height: 1000px;
+    background-size: 150vw;
+  }
+  @include _1440 {
+    height: 1207.44px;
+  }
+  @include _1280 {
+    height: 819.98px;
+    background-position: center -50px;
+  }
+  @include _768 {
+    height: 1944px;
+    background-position: center -580px;
+    background-size: 850vw;
+  }
+}
+.FifthStepWrap {
+  padding: 0 0 0 138px;
+  @include _1440 {
+    padding: 0 0 0 23px;
+  }
+  @include _1280 {
+    padding: 0 0 0 23px;
+  }
+  @include _768 {
+    padding: 0 0 0 16px;
+  }
+}
+.FifthWrapText {
+  width: 596px;
+  padding: 382px 0 56px 0px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  @include _max {
+    padding: 150px 0 56px 0px;
+  }
+  @include _1280 {
+    padding: 144px 0 24px 0px;
+  }
+  @include _768 {
+    padding: 84px 0 24px 0px;
+    width: 288px;
+  }
+}
+.FifthMainText {
+  margin: 0;
+  @include _1280 {
+    font-size: 24px;
+    line-height: 32px;
+  }
+  @include _768 {
+    font-size: 24px;
+  }
+}
+.Technology {
+  display: flex;
+  @include _max {
+    justify-content: space-between;
+  }
+  @include _1280 {
+    justify-content: space-between;
+  }
+  @include _768 {
+    flex-direction: column;
+  }
+}
+.TechnologyWrap {
+  margin-right: 72px;
+  @include _1280 {
+    margin-right: 13px;
+  }
+}
+.TechnologyMainText {
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  margin-bottom: 53px;
+  @include _1280 {
+    margin-bottom: 19px;
+  }
+  @include _768 {
+    margin-bottom: 19px;
+  }
+}
+.FifthOtherText {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 24px;
+  align-items: center;
+  color: #3f4252;
+  margin: 0;
+  @include _1280 {
+    font-size: 16px;
+  }
+  @include _768 {
+    font-size: 16px;
+  }
+}
+.TechnologyOtherText {
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+}
+.TechnologyItem {
+  display: flex;
+  margin-bottom: 20px;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px;
+  gap: 24px;
+  @include _1280 {
+    gap: 8px;
+  }
+  @include _768 {
+    gap: 8px;
+  }
+}
+.TechnologyIcon {
+  width: 48px;
+  height: 48px;
+  @include _1280 {
+    width: 32px;
+    height: 32px;
+  }
+  @include _768 {
+    width: 32px;
+    height: 32px;
+  }
 }
