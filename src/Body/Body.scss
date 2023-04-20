@@ -359,7 +359,7 @@ mark {
 }
 .FifthStep {
   width: 100%;
-  background-image: url(./FifthStepBack.svg);
+  background-image: url(./MainSVG/FifthStepBack.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -377,7 +377,7 @@ mark {
   }
   @include _768 {
     height: 1944px;
-    background-position: center -580px;
+    background-position: center -392px;
     background-size: 850vw;
   }
 }

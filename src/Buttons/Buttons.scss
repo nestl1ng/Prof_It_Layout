@@ -12,6 +12,7 @@
   border: 2px solid #ff5a1f;
   border-radius: 32px;
   background-color: white;
+  cursor: pointer;
   @include _1280 {
     width: 270px;
     padding: 16px 30px;

@@ -1,10 +1,10 @@
 import "./Body.scss";
-import { ReactComponent as FirstPic } from "./FirstPic.svg";
-import { ReactComponent as SecondPic } from "./SecondPic.svg";
-import { ReactComponent as BrowserPic } from "./Browser.svg";
-import { ReactComponent as PhonePic } from "./Phone.svg";
-import { ReactComponent as MonitorPic } from "./Monitor.svg";
-import { ReactComponent as GearPic } from "./Gear.svg";
+import { ReactComponent as FirstPic } from "./MainSVG/FirstPic.svg";
+import { ReactComponent as SecondPic } from "./MainSVG/SecondPic.svg";
+import { ReactComponent as BrowserPic } from "./MainSVG/Browser.svg";
+import { ReactComponent as PhonePic } from "./MainSVG/Phone.svg";
+import { ReactComponent as MonitorPic } from "./MainSVG/Monitor.svg";
+import { ReactComponent as GearPic } from "./MainSVG/Gear.svg";
 import OrderProjectBtn from "../Buttons/OrderProjectBtn";
 
 import { ReactComponent as Ansible } from "./TechnologySVG/Ansible.svg";
