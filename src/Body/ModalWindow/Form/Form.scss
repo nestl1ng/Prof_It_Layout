@@ -1,5 +1,9 @@
+@import "../../../path_file.scss";
 .Form {
   margin: 24px 0 0 0;
+  @include _768 {
+    margin: 16px 0 0 0;
+  }
 }
 .FormFieldWrap {
   position: relative;
@@ -8,6 +12,9 @@
   display: flex;
   justify-content: space-between;
   margin-bottom: 16px;
+  @include _768 {
+    flex-direction: column;
+  }
 }
 .FieldLabel {
   font-family: "Montserrat";
@@ -36,6 +43,9 @@
   font-size: 14px;
   line-height: 24px;
   color: #3f4252;
+  @include _768 {
+    width: 100%;
+  }
 }
 .FieldInput:hover,
 :focus {
@@ -49,6 +59,9 @@
 .FieldInput.Big {
   height: 90px;
   resize: none;
+  @include _768 {
+    height: 114px;
+  }
 }
 .FieldInput.error {
   border: 1px solid #e73f3f;
@@ -63,6 +76,12 @@
   right: 0%;
   transform: translate(-50%, -50%);
   cursor: pointer;
+}
+.ClearBtn.Big{
+  top: 20%;
+}
+.ClearBtn.disable{
+ display: none;
 }
 .SendBtn.disable {
   border: 2px solid #bebebe;
@@ -82,6 +101,9 @@
   color: #ff5a1f;
   background-color: #ffffff;
   cursor: pointer;
+  @include _768 {
+    align-self: stretch;
+  }
 }
 .ErrorMass {
   height: 22px;
@@ -104,12 +126,19 @@
   right: 48%;
   top: 115%;
   transform: translate(-50%, -50%);
+  @include _768 {
+    right: 80%;
+  }
 }
 .FormFooter {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
   margin-top: 24px;
+  @include _768 {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 .FooterText {
   width: 297px;
@@ -120,4 +149,12 @@
   line-height: 24px;
   color: #3f4252;
   margin: 0;
+  @include _768 {
+    margin-top: 16px;
+    width: 278px;
+  }
+}
+.PrivacyMark{
+  color: #608DF1;
+  cursor: pointer;
 }

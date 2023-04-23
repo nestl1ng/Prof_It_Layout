@@ -1,13 +1,19 @@
 import "./Form.scss";
 import { useForm } from "react-hook-form";
 import { ReactComponent as ClearBtn } from "./../../../Buttons/ClearField.svg";
+import { useState } from "react";
+import PrivacyPage from "./PrivacyPage/PrivacyPage";
 
 const Form = () => {
+  const [showModalPrivacy, setShowModalPrivacy] = useState(false);
+  const closeModal = ()=>{
+    setShowModalPrivacy(false);
+  }
   const {
     register,
     resetField,
     getFieldState,
-    formState: { errors },
+    formState: { isDirty, dirtyFields, errors },
     handleSubmit,
   } = useForm({
     mode: "onChange",
@@ -57,7 +63,9 @@ const Form = () => {
                 })}
               />
               <ClearBtn
-                className="ClearBtn"
+                className={`ClearBtn ${
+                  getFieldState("surname").isDirty ? "" : "disable"
+                }`}
                 onClick={() => resetField("surname")}
               />
             </div>
@@ -79,7 +87,9 @@ const Form = () => {
                 })}
               />
               <ClearBtn
-                className="ClearBtn"
+                className={`ClearBtn ${
+                  getFieldState("name").isDirty ? "" : "disable"
+                }`}
                 onClick={() => resetField("name")}
               />
             </div>
@@ -98,7 +108,9 @@ const Form = () => {
                 })}
               />
               <ClearBtn
-                className="ClearBtn"
+                className={`ClearBtn ${
+                  getFieldState("midlName").isDirty ? "" : "disable"
+                }`}
                 onClick={() => resetField("midlName")}
               />
             </div>
@@ -115,7 +127,9 @@ const Form = () => {
                 {...register("company")}
               />
               <ClearBtn
-                className="ClearBtn"
+                className={`ClearBtn ${
+                  getFieldState("company").isDirty ? "" : "disable"
+                }`}
                 onClick={() => resetField("company")}
               />
             </div>
@@ -137,7 +151,9 @@ const Form = () => {
                 })}
               />
               <ClearBtn
-                className="ClearBtn"
+                className={`ClearBtn ${
+                  getFieldState("email").isDirty ? "" : "disable"
+                }`}
                 onClick={() => resetField("email")}
               />
             </div>
@@ -160,7 +176,9 @@ const Form = () => {
                 })}
               />
               <ClearBtn
-                className="ClearBtn"
+                className={`ClearBtn ${
+                  getFieldState("phone").isDirty ? "" : "disable"
+                }`}
                 onClick={() => resetField("phone")}
               />
             </div>
@@ -177,7 +195,9 @@ const Form = () => {
                 {...register("task")}
               />
               <ClearBtn
-                className="ClearBtn"
+                className={`ClearBtn Big ${
+                  getFieldState("task").isDirty ? "" : "disable"
+                }`}
                 onClick={() => resetField("task")}
               />
             </div>
@@ -196,7 +216,9 @@ const Form = () => {
                 })}
               />
               <ClearBtn
-                className="ClearBtn"
+                className={`ClearBtn ${
+                  getFieldState("money").isDirty ? "" : "disable"
+                }`}
                 onClick={() => resetField("money")}
               />
             </div>
@@ -227,8 +249,9 @@ const Form = () => {
             value="Отправить"
           />
           <h4 className="FooterText">
-            Нажимая на кнопку, вы соглашаетесь с Обработкой персональных данных
+            Нажимая на кнопку, вы соглашаетесь с <mark className="PrivacyMark" onClick={()=>{setShowModalPrivacy(true)}}>Обработкой персональных данных</mark>
           </h4>
+          <PrivacyPage  active={showModalPrivacy} closeModal={closeModal}/>
         </div>
       </form>
     </div>
