@@ -365,29 +365,32 @@ mark {
   background-size: cover;
   height: 1207.44px;
   @include _max {
-    height: 1000px;
-    background-size: 150vw;
+    height: 1207.44px;
+    background-size: 1920px 1207px;
   }
   @include _1440 {
     height: 1207.44px;
   }
   @include _1280 {
     height: 819.98px;
-    background-position: center -50px;
+    background-size: 1280px 819.98px;
   }
   @include _768 {
     height: 1944px;
-    background-position: center -392px;
-    background-size: 850vw;
+    background-size: 2668px 2368px;
+    background-position: -633px -433px;
   }
 }
 .FifthStepWrap {
   padding: 0 0 0 138px;
+  @include _max {
+    padding: 150px 0 0 138px;
+  }
   @include _1440 {
     padding: 0 0 0 23px;
   }
   @include _1280 {
-    padding: 0 0 0 23px;
+    padding: 100px 0 0 23px;
   }
   @include _768 {
     padding: 0 0 0 16px;
